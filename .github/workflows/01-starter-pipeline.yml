@@ -1,0 +1,13 @@
+name: Starter Workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  say-hello:
+    runs-on: windows-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello From Pipeline"
