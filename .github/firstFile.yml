@@ -1,17 +1,14 @@
 name: Starter Workflow
-
+ 
 on:
   push:
-   branches: [main]
-
+    branches: [main]
+ 
 jobs:
   say-hello:
-    # runs-on: windows-latest
-    runs-on: self-hosted
-
+    runs-on: windows-latest
+    # runs-on: self-hosted
+ 
     steps:
       - name: Say Hello
         run: echo "Hello From Pipeline"
-
-    #  - name: Execute Commonds
-       # run: ls
