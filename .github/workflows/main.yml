@@ -1,0 +1,20 @@
+name: CI - Dot Net Project
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  build:
+    # runs-on: windows-latest
+    runs-on: selfhosted-runner
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build Project
+        run: dotnet build --configuration Release
+    
